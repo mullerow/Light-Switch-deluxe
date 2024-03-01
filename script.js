@@ -1,7 +1,11 @@
 let count = 0;
 function buttonClick() {
-  console.log("klick!");
-  count++;
+  if (count === 1) {
+    console.log("klick!");
+    html.classList.add("color0");
+    html.classList.remove("color1");
+  }
+
   if (count === 2) {
     console.log("HEy!");
   }
@@ -15,21 +19,16 @@ function buttonClick() {
   if (count === 5) {
     console.log("BOOOOMMM!!!!!!");
     count = 0;
+    html.classList.add("color1");
+    html.classList.remove("color0");
   }
+  count++;
 }
 
 const lightSwitch = document.querySelector("button");
-const main = document.querySelector("main");
-/*
-main.addEventListener("click", function () {
-  console.log("mainklick!");
-});
-*/
-window.addEventListener("keypress", function (eventObj) {
-  if (eventObj.key == "a") {
-    console.log("klickiiiii");
-  }
-});
+const html = document.querySelector("html");
+
+window.addEventListener("click", buttonClick);
 
 // change nevent!!! geil!
 // input  geil!! --> timer einbaubar!

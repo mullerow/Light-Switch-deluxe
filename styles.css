@@ -1,3 +1,7 @@
+html {
+  background-color: azure;
+}
+
 button {
   display: block;
   border: 2px solid red;
@@ -6,6 +10,14 @@ button {
   margin-top: 45vh;
   width: 100px;
   height: 5vh;
-  min-height: 20px;
+  min-height: 30px;
   border-radius: 10px;
+}
+
+.color0 {
+  background-color: azure;
+}
+
+.color1 {
+  background-color: rgb(3, 3, 65);
 }
