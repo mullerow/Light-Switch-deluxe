@@ -1,9 +1,27 @@
+:root {
+}
+
 html {
-  background-color: azure;
+  _background-color: azure;
+  margin: 0;
+}
+main {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 500px;
+  background-image: linear-gradient(45deg, red, yellow);
+  transition: background-image 1s ease-in-out;
+  mix-blend-mode: overlay;
+  z-index: 5;
+  position: relative;
 }
 
 button {
-  display: block;
+  background-color: aliceblue;
+  position: absolute;
   border: 2px solid red;
   margin-left: auto;
   margin-right: auto;
@@ -12,12 +30,17 @@ button {
   height: 5vh;
   min-height: 30px;
   border-radius: 10px;
+  z-index: 10;
+  top: 50%;
+  left: 47%;
 }
 
 .color0 {
-  background-color: azure;
+  background-color: #f8ef87;
+  transition: background-color 1s ease-in-out;
 }
 
 .color1 {
   background-color: rgb(3, 3, 65);
+  transition: background-color 1s ease-in-out;
 }

@@ -5,7 +5,7 @@ function buttonClick() {
     html.classList.add("color0");
     html.classList.remove("color1");
   }
-
+  /*
   if (count === 2) {
     console.log("HEy!");
   }
@@ -16,8 +16,10 @@ function buttonClick() {
   if (count === 4) {
     console.log("STopp!!!!!!");
   }
-  if (count === 5) {
+  */
+  if (count === 2) {
     console.log("BOOOOMMM!!!!!!");
+    console.clear();
     count = 0;
     html.classList.add("color1");
     html.classList.remove("color0");
