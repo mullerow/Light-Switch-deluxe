@@ -2,35 +2,21 @@ let count = 0;
 function buttonClick() {
   if (count === 1) {
     console.log("klick!");
-    html.classList.add("color0");
-    html.classList.remove("color1");
+    main.classList.add("color0");
+    main.classList.remove("color1");
   }
-  /*
   if (count === 2) {
-    console.log("HEy!");
-  }
-  if (count === 3) {
-    console.log("Lass Das!");
-  }
-
-  if (count === 4) {
-    console.log("STopp!!!!!!");
-  }
-  */
-  if (count === 2) {
-    console.log("BOOOOMMM!!!!!!");
-    console.clear();
     count = 0;
-    html.classList.add("color1");
-    html.classList.remove("color0");
+    main.classList.add("color1");
+    main.classList.remove("color0");
   }
   count++;
 }
 
-const lightSwitch = document.querySelector("button");
-const html = document.querySelector("html");
+const lightSwitch = document.querySelector(".light-switch");
+const main = document.querySelector("main");
 
-window.addEventListener("click", buttonClick);
+lightSwitch.addEventListener("click", buttonClick);
 
 // change nevent!!! geil!
 // input  geil!! --> timer einbaubar!

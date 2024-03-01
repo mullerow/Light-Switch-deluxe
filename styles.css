@@ -1,28 +1,31 @@
 :root {
+  --day-color: #f8ef87;
+  --night-color: rgb(2, 2, 145);
 }
 
 html {
-  _background-color: azure;
-  margin: 0;
+  box-sizing: border-box;
 }
+
 main {
   position: relative;
 }
 
-button {
+.light-switch {
   background-color: aliceblue;
   position: absolute;
   border: 2px solid red;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 45vh;
-  width: 100px;
-  height: 5vh;
-  min-height: 30px;
+  width: 30%;
+  height: 40px;
   border-radius: 10px;
-  z-index: 10;
-  top: 50%;
-  left: 47%;
+  top: 101%;
+  left: 35%;
+}
+
+.light-switch:hover {
+  border: 5px solid red;
 }
 
 .container {
@@ -36,7 +39,7 @@ button {
 }
 
 .color0 {
-  background-color: #f8ef87;
+  background-color: var(--day-color);
   transition: background-color 1.5s ease-in-out;
   transition-timing-function: cubic-bezier(0, 0.55, 0.51, 1);
   .star1,
@@ -48,7 +51,7 @@ button {
 }
 
 .color1 {
-  background-color: rgb(3, 3, 65);
+  background-color: var(--night-color);
   transition: background-color 1.5s ease-in-out;
   transition-timing-function: cubic-bezier(0, 0.55, 0.51, 1);
   .star1,
@@ -67,8 +70,7 @@ button {
   left: 200px;
   width: 50px;
   height: 50px;
-  background-color: aqua;
-  border: 20px solid goldenrod;
+  background-color: --night-color;
   border-radius: 100%;
   z-index: 20;
   clip-path: polygon(
@@ -92,6 +94,7 @@ button {
   left: 200px;
   width: 50px;
   height: 50px;
+  border: 20px solid goldenrod;
 }
 
 .star2 {
@@ -99,11 +102,13 @@ button {
   left: 270px;
   width: 30px;
   height: 30px;
+  border: 13px solid goldenrod;
 }
 
 .star3 {
   top: 340px;
   left: 670px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  border: 10px solid goldenrod;
 }
