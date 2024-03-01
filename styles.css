@@ -9,16 +9,6 @@ main {
   position: relative;
 }
 
-.container {
-  position: absolute;
-  height: 500px;
-  background-image: linear-gradient(45deg, red, yellow);
-  transition: background-image 1s ease-in-out;
-  mix-blend-mode: overlay;
-  z-index: 5;
-  position: relative;
-}
-
 button {
   background-color: aliceblue;
   position: absolute;
@@ -35,12 +25,85 @@ button {
   left: 47%;
 }
 
+.container {
+  position: absolute;
+  height: 800px;
+  background-image: linear-gradient(45deg, red, yellow);
+  transition: background-image 1s ease-in-out;
+  mix-blend-mode: overlay;
+  z-index: 5;
+  position: relative;
+}
+
 .color0 {
   background-color: #f8ef87;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 1.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.51, 1);
+  .star1,
+  .star2,
+  .star3 {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+  }
 }
 
 .color1 {
   background-color: rgb(3, 3, 65);
-  transition: background-color 1s ease-in-out;
+  transition: background-color 1.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.51, 1);
+  .star1,
+  .star2,
+  .star3 {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+  }
+}
+
+.star1,
+.star2,
+.star3 {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  border: 20px solid goldenrod;
+  border-radius: 100%;
+  z-index: 20;
+  clip-path: polygon(
+    50% 0%,
+    60% 35%,
+    95% 20%,
+    70% 50%,
+    95% 80%,
+    60% 65%,
+    50% 100%,
+    40% 65%,
+    5% 80%,
+    30% 50%,
+    5% 20%,
+    40% 35%
+  );
+}
+
+.star1 {
+  top: 200px;
+  left: 200px;
+  width: 50px;
+  height: 50px;
+}
+
+.star2 {
+  top: 430px;
+  left: 270px;
+  width: 30px;
+  height: 30px;
+}
+
+.star3 {
+  top: 340px;
+  left: 670px;
+  width: 30px;
+  height: 30px;
 }
