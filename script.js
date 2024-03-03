@@ -1,22 +1,43 @@
 let count = 0;
-function buttonClick() {
+function switchClick() {
   if (count === 1) {
     console.log("klick!");
     main.classList.add("color0");
     main.classList.remove("color1");
+    lightSwitch.textContent = "Hallo Nacht!";
   }
   if (count === 2) {
     count = 0;
     main.classList.add("color1");
     main.classList.remove("color0");
+
+    lightSwitch.textContent = "Hallo Tag!!";
+    star1.style.animation = "";
   }
-  count++;
+  !count++;
+}
+
+function danceClick() {
+  star1.style.animation = "sparkiling-stars 2s infinite";
+  star1.classList.add("dance-click");
+  star2.classList.add("dance-click");
+  star3.classList.add("dance-click");
+  star4.classList.add("dance-click");
+  star5.classList.add("dance-click");
 }
 
 const lightSwitch = document.querySelector(".light-switch");
 const main = document.querySelector("main");
+const starDance = document.querySelector(".star-dance-button");
+const star1 = document.querySelector(".star1");
+const star2 = document.querySelector(".star2");
+const star3 = document.querySelector(".star3");
+const star4 = document.querySelector(".star4");
+const star5 = document.querySelector(".star5");
 
-lightSwitch.addEventListener("click", buttonClick);
+lightSwitch.addEventListener("click", switchClick);
+
+starDance.addEventListener("click", danceClick);
 
 // change nevent!!! geil!
 // input  geil!! --> timer einbaubar!
