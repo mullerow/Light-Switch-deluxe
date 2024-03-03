@@ -17,13 +17,6 @@ function switchClick() {
   }
   count++;
 }
-/* NOTIZ!!!! 
-
-vermutlich bliebt beim tag nacht wechsel animation aktiv und kann nicht überschieben werde, nochmal versuchen 
-über inline style zu steuern vermutlich lösung!
-
-#
-*/
 
 const lightSwitch = document.querySelector(".light-switch");
 const main = document.querySelector("main");
