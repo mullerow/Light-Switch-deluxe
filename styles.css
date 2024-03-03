@@ -28,6 +28,10 @@ main {
   background-color: cornflowerblue;
 }
 
+.star-dance-moves {
+  animation: sparkiling-stars 2s infinite;
+}
+
 .star-dance-button {
   background-color: aliceblue;
   position: absolute;
