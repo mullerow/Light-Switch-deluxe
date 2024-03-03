@@ -1,4 +1,4 @@
-let count = 0;
+let count = 1;
 let s1 = 0;
 let s2 = 0;
 let s3 = 0;
@@ -6,19 +6,24 @@ let s4 = 0;
 let s5 = 0;
 function switchClick() {
   if (count === 1) {
-    console.log("klick!");
-    main.classList.add("color0");
-    main.classList.remove("color1");
+    main.classList.add("dayTime");
+    main.classList.remove("nightTime");
     lightSwitch.textContent = "Hallo Nacht!";
   } else if (count === 2) {
     count = 0;
-    main.classList.add("color1");
-    main.classList.remove("color0");
-
+    main.classList.add("nightTime");
+    main.classList.remove("dayTime");
     lightSwitch.textContent = "Hallo Tag!!";
   }
-  !count++;
+  count++;
 }
+/* NOTIZ!!!! 
+
+vermutlich bliebt beim tag nacht wechsel animation aktiv und kann nicht überschieben werde, nochmal versuchen 
+über inline style zu steuern vermutlich lösung!
+
+#
+*/
 
 const lightSwitch = document.querySelector(".light-switch");
 const main = document.querySelector("main");
@@ -37,46 +42,46 @@ lightSwitch.addEventListener("click", switchClick);
 
 starDance1.addEventListener("click", function () {
   if (s1 === 0) {
-    star1.classList.add("star-dance-moves");
+    star1.style.animation = "sparkiling-stars 2s infinite";
     s1++;
   } else if (s1 === 1) {
-    star1.classList.remove("star-dance-moves");
+    star1.style.animation = "";
     s1 = 0;
   }
 });
 starDance2.addEventListener("click", function () {
   if (s2 === 0) {
-    star2.classList.add("star-dance-moves");
+    star2.style.animation = "sparkiling-stars 2s infinite";
     s2++;
   } else if (s2 === 1) {
-    star2.classList.remove("star-dance-moves");
+    star2.style.animation = "";
     s2 = 0;
   }
 });
 starDance3.addEventListener("click", function () {
   if (s3 === 0) {
-    star3.classList.add("star-dance-moves");
+    star3.style.animation = "sparkiling-stars 2s infinite";
     s3++;
   } else if (s3 === 1) {
-    star3.classList.remove("star-dance-moves");
+    star3.style.animation = "";
     s3 = 0;
   }
 });
 starDance4.addEventListener("click", function () {
   if (s4 === 0) {
-    star4.classList.add("star-dance-moves");
+    star4.style.animation = "sparkiling-stars 2s infinite";
     s4++;
   } else if (s4 === 1) {
-    star4.classList.remove("star-dance-moves");
+    star4.style.animation = "";
     s4 = 0;
   }
 });
 starDance5.addEventListener("click", function () {
   if (s5 === 0) {
-    star5.classList.add("star-dance-moves");
+    star5.style.animation = "sparkiling-stars 2s infinite";
     s5++;
   } else if (s5 === 1) {
-    star5.classList.remove("star-dance-moves");
+    star5.style.animation = "";
     s5 = 0;
   }
 });
